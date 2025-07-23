@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AR Wallet - Activated</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 16px;
+      border-bottom: 1px solid #ddd;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .header .icon {
+      font-size: 20px;
+      color: #444;
+      cursor: pointer;
+    }
+    .container {
+      max-width: 420px;
+      margin: 20px auto 40px;
+      padding: 16px;
+    }
+
+    .wallet-box {
+      background: rgba(24, 34, 54, 0.9);
+      backdrop-filter: blur(12px);
+      border-radius: 14px;
+      color: white;
+      padding: 18px 20px 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+    .wallet-title-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .wallet-title-row img {
+      width: 36px;
+      height: 36px;
+    }
+    .wallet-title {
+      font-size: 15px;
+      font-weight: 600;
+      user-select: none;
+    }
+    .wallet-label {
+      font-size: 13px;
+      color: #ddd;
+      margin-top: 6px;
+    }
+    .wallet-balance {
+      font-size: 18px;
+      font-weight: 700;
+      color: #f8ca3c;
+      margin-top: 4px;
+    }
+
+    .wallet-status {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #4eff4e;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin: 26px 0 20px;
+    }
+    .btn {
+      background: #f8ca3c;
+      padding: 12px 22px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #111;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .price-info {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    .price-info img {
+      width: 18px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    .instructions {
+      text-align: center;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.5;
+      margin-top: 16px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+    }
+
+    /* Popup Styles */
+    #popup {
+      position: fixed;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 24px 32px;
+      border-radius: 14px;
+      z-index: 999;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="icon" onclick="history.back()">&#8592;</div>
+    <div>AR wallet</div>
+    <div class="icon" onclick="location.reload()">&#10227;</div>
+  </div>
+
+  <div class="container">
+
+    <!-- Wallet Card -->
+    <div class="wallet-box">
+      <div class="wallet-title-row">
+        <img src="https://ossimg.91admin123admin.com/91club/payNameIcon/payNameIcon_20241030000604or92.png" alt="wallet logo">
+        <div class="wallet-title">AR wallet</div>
+      </div>
+      <div class="wallet-label">Wallet Balance</div>
+      <div class="wallet-balance">0.00 INR</div>
+    </div>
+
+    <div class="wallet-status">Wallet Activated</div>
+
+    <!-- Action buttons -->
+    <div class="actions">
+      <button class="btn" onclick="showPopup()">Deposit AR</button>
+      <button class="btn" onclick="showPopup()">Withdraw AR</button>
+    </div>
+
+    <!-- AR price -->
+    <div class="price-info">
+      <img src="https://flagcdn.com/w40/in.png" alt="IN Flag" />
+      13 INR = 1 AR
+    </div>
+
+    <!-- Instructions -->
+    <div class="instructions">
+      You can deposit using AR Pay. To withdraw, sell ARB directly to UPI and receive INR. Earn rewards per transaction.
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">All rights reserved @2025 TSBHAI</div>
+
+  </div>
+
+  <!-- Error Popup -->
+  <div id="popup">Error occurred!!</div>
+
+  <script>
+    function showPopup() {
+      const popup = document.getElementById('popup');
+      popup.style.display = 'block';
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
