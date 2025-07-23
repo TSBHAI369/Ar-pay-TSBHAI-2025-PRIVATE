@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AR Wallet UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #222;
+      padding-bottom: 100px; /* space for bottom button */
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+    }
+    .header .arrow {
+      font-size: 18px;
+      color: #444;
+    }
+    .header-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .refresh {
+      font-size: 16px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #444;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 450px;
+      margin: 18px auto;
+    }
+
+    .ar-wallet-box {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 16px;
+      background: rgba(24, 34, 54, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .wallet-top-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ar-wallet-logo {
+      width: 32px;
+      height: 32px;
+    }
+
+    .ar-wallet-title {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .ar-wallet-status {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: none;
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .ar-wallet-content {
+      margin-top: 25px;
+      z-index: 1;
+    }
+
+    .ar-wallet-balance {
+      margin-top: 6px;
+      color: #f8ca3c;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .ar-wallet-balance span {
+      font-size: 12px;
+      font-weight: normal;
+      margin-left: 4px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      font-size: 13px;
+      margin: 16px 0 4px;
+    }
+
+    .section-content {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #3a3a3a;
+    }
+
+    .button-yellow {
+      background: #f8ca3c;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 13px;
+      padding: 10px;
+      border-radius: 6px;
+      margin: 14px 0;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button-yellow-full {
+      position: fixed;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 450px;
+      background: #f8ca3c;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 13px;
+      border-radius: 6px;
+      z-index: 100;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="arrow">&#8592;</div>
+    <div class="header-title">AR wallet</div>
+    <button class="refresh" title="Refresh">&#10227;</button>
+  </div>
+
+  <div class="container">
+    <div class="ar-wallet-box">
+      <div class="wallet-top-row">
+        <img src="https://ossimg.91admin123admin.com/91club/payNameIcon/payNameIcon_20241030000604or92.png" class="ar-wallet-logo" alt="Logo">
+        <div class="ar-wallet-title">AR wallet</div>
+      </div>
+
+      <div class="ar-wallet-status">Wallet is not activated</div>
+
+      <div class="ar-wallet-content">
+        <div class="ar-wallet-balance">0.00<span>INR</span></div>
+      </div>
+    </div>
+
+    <div class="section-title">AR Wallet</div>
+    <div class="section-content">
+      AR Wallet is a third-party payment service that uses ARB (digital currency) for a fast payment on the platform. It is Safe, stable and fast.
+    </div>
+
+    <button class="button-yellow">How to activate AR Wallet</button>
+
+    <div class="section-title">Features of AR wallet</div>
+    <div class="section-content">
+      You only need to withdraw the balance from AR wallet! When you want to have fun, you can quickly deposit to the platform through AR Pay. It only takes 5 seconds to complete the deposit. When you need to withdraw money to your bank card, you can quickly sell ARB coin in AR Wallet and withdraw in UPI, and you will also get additional rewards! This method reduces the transaction amount of your bank account while you are having fun. You don’t need to worry about your bank limit. You only need to sell your ARB when you want to withdraw in your UPI!
+    </div>
+  </div>
+
+  <button class="button-yellow-full" onclick="location.href='number.html'">Activate AR Wallet</button>
+
+
+</body>
+</html>
